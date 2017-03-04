@@ -1,2 +1,2 @@
-$PYTHON "test/test-meshes.py"
-$PYTHON "test/test-mesh-generation.py"
+python "test/test-meshes.py"
+python "test/test-mesh-generation.py"
