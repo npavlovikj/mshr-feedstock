@@ -19,7 +19,7 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -28,16 +28,16 @@ requirements:
     - cmake
     - python
     - fenics {{version}}
-    - gmp
-    - mpfr
+    - gmp >=5.0.1,<7
+    - mpfr 3.*
     - swig
     - toolchain
   run:
     - boost 1.63.*
     - python
     - fenics {{version}}
-    - gmp
-    - mpfr
+    - gmp >=5.0.1,<7
+    - mpfr 3.*
 
 test:
   source_files:
