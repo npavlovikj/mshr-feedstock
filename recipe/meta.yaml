@@ -1,6 +1,6 @@
 {% set name = "mshr" %}
-{% set version = "2016.2.0" %}
-{% set sha256 = "672cabbf96dee7dd3ca6403c6d4b168be23baf6ae65ab801c82ef5f1b6591c32" %}
+{% set version = "2017.1.0" %}
+{% set sha256 = "ec132dbc4c5469d8f828fc5c576c39c3d45cb231bd0b552585f9378c295ee689" %}
 
 package:
   name: {{ name }}
