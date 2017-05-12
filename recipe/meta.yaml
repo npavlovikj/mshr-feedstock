@@ -19,7 +19,7 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
