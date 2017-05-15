@@ -1,6 +1,6 @@
 {% set name = "mshr" %}
-{% set version = "2016.2.0" %}
-{% set sha256 = "672cabbf96dee7dd3ca6403c6d4b168be23baf6ae65ab801c82ef5f1b6591c32" %}
+{% set version = "2017.1.0" %}
+{% set sha256 = "ec132dbc4c5469d8f828fc5c576c39c3d45cb231bd0b552585f9378c295ee689" %}
 
 package:
   name: {{ name }}
@@ -11,15 +11,12 @@ source:
   url: https://bitbucket.org/fenics-project/{{ name }}/downloads/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - python-executable.patch
-    # patch needed to workaround bug in older clang (Xcode < 7)
-    - explicit-copy-initialization.patch  # [osx]
     # Link boost_thread on macOS. Doesn't appear to be needed
     # on recent versions (10.12), but seems needed on Travis (Xcode 6.4, currently).
     - boost-thread.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -55,7 +52,7 @@ about:
     mshr is the mesh generation component of FEniCS. It generates simplicial DOLFIN
     meshes in 2D and 3D from geometries described by Constructive Solid Geometry (CSG) or from
     surface files, utilizing CGAL and Tetgen as mesh generation backends.
-  doc_url: https://bitbucket.org/fenics-project/mshr/wiki/Home
+  doc_url: http://fenics.readthedocs.io/projects/mshr
   dev_url: https://bitbucket.org/fenics-project/mshr
 
 extra:
