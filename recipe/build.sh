@@ -1,3 +1,5 @@
+#!/bin/sh
+
 INCLUDE_PATH="$PREFIX/include"
 LIBRARY_PATH="$PREFIX/lib"
 
