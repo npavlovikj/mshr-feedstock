@@ -1,6 +1,6 @@
 {% set name = "mshr" %}
-{% set version = "2017.1.0" %}
-{% set sha256 = "ec132dbc4c5469d8f828fc5c576c39c3d45cb231bd0b552585f9378c295ee689" %}
+{% set version = "2017.2.0" %}
+{% set sha256 = "61b519f84148e789e413fc6b9acaaea4fafb511fcd23260cff6ee7d8555c6a9d" %}
 
 package:
   name: {{ name }}
@@ -16,12 +16,12 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
   build:
-    - boost-cpp 1.64.*
+    - boost-cpp 1.65.*
     - cmake
     - python
     - fenics {{version}}
@@ -30,7 +30,7 @@ requirements:
     - swig
     - toolchain
   run:
-    - boost-cpp 1.64.*
+    - boost-cpp 1.65.*
     - python
     - fenics {{version}}
     - gmp >=5.0.1,<7
