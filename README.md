@@ -17,14 +17,16 @@ surface files, utilizing CGAL and Tetgen as mesh generation backends.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mshr-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mshr-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mshr-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mshr-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/mshr-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/mshr-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/mshr-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/mshr-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mshr/badges/version.svg)](https://anaconda.org/conda-forge/mshr)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mshr/badges/downloads.svg)](https://anaconda.org/conda-forge/mshr)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mshr-green.svg)](https://anaconda.org/conda-forge/mshr) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mshr.svg)](https://anaconda.org/conda-forge/mshr) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mshr.svg)](https://anaconda.org/conda-forge/mshr) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mshr.svg)](https://anaconda.org/conda-forge/mshr) |
 
 Installing mshr
 ===============
