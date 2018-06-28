@@ -21,20 +21,23 @@ build:
 
 requirements:
   build:
-    - boost-cpp 1.65.*
     - cmake
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - boost-cpp
     - python
     - fenics {{version}}
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
+    - gmp
+    - mpfr
     - swig
-    - toolchain
   run:
-    - boost-cpp 1.65.*
+    - boost-cpp
     - python
     - fenics {{version}}
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
+    - gmp
+    - mpfr
 
 test:
   source_files:

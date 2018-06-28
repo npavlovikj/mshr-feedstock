@@ -1,0 +1,24 @@
+boost_cpp:
+- 1.66.0
+c_compiler:
+- toolchain_c
+cxx_compiler:
+- toolchain_cxx
+fortran_compiler:
+- toolchain_fort
+gmp:
+- '6'
+mpfr:
+- '3'
+pin_run_as_build:
+  boost-cpp:
+    max_pin: x.x.x
+  gmp:
+    max_pin: x
+  mpfr:
+    max_pin: x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- '2.7'
