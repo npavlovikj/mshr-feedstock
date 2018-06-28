@@ -9,7 +9,7 @@ fortran_compiler:
 gmp:
 - '6'
 mpfr:
-- '4'
+- '3'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
