@@ -4,6 +4,12 @@ INCLUDE_PATH="$PREFIX/include"
 LIBRARY_PATH="$PREFIX/lib"
 
 export LDFLAGS="-Wl,-rpath,$LIBRARY_PATH $LDFLAGS"
+if [[ "$(uname)" == "Darwin" ]]; then
+  # scrub problematic -fdebug-prefix-map from C[XX]FLAGS
+  # these are loaded in the clang[++] activate scripts
+  export CFLAGS=$(echo $CFLAGS | sed -E 's@\-fdebug\-prefix\-map[^ ]*@@g')
+  export CXXFLAGS=$(echo $CXXFLAGS | sed -E 's@\-fdebug\-prefix\-map[^ ]*@@g')
+fi
 
 
 mkdir build
@@ -20,3 +26,6 @@ cmake \
 
 make -j${CPU_COUNT} VERBOSE=1
 make install
+
+cd ../python
+$PYTHON -m pip install -v --no-deps --ignore-installed --no-binary :all: .
