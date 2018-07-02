@@ -1,6 +1,6 @@
 {% set name = "mshr" %}
-{% set version = "2017.2.0" %}
-{% set sha256 = "61b519f84148e789e413fc6b9acaaea4fafb511fcd23260cff6ee7d8555c6a9d" %}
+{% set version = "2018.1.0" %}
+{% set sha256 = "c2f91300aff792de76b937e7e709076d8ac37043ddb6fe250ebb4229b48ac014" %}
 
 package:
   name: {{ name }}
@@ -17,7 +17,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: true  # [win or py2k]
 
 requirements:
   build:
@@ -28,10 +28,11 @@ requirements:
   host:
     - boost-cpp
     - python
+    - pip
     - fenics {{version}}
     - gmp
     - mpfr
-    - swig
+    - pybind11
   run:
     - boost-cpp
     - python
